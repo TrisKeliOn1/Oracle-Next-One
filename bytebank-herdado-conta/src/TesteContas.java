@@ -1,7 +1,7 @@
 
 public class TesteContas {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SaldoInsuficienteException {
 
 		ContaCorrente cc = new ContaCorrente(111, 111);
 		cc.deposita(100.0);
@@ -11,8 +11,8 @@ public class TesteContas {
 		
 		cc.transfere(10.0, cp);
 		
-		System.out.println("CC: " + cc.GetSaldo());
-		System.out.println("CP: " + cp.GetSaldo());
+		System.out.println("CC: " + cc.getSaldo());
+		System.out.println("CP: " + cp.getSaldo());
 
 	}
 }
